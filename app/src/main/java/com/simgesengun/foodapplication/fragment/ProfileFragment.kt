@@ -1,15 +1,15 @@
-package com.simgesengun.foodapplication
+package com.simgesengun.foodapplication.fragment
 
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.simgesengun.foodapplication.R
 
-class CartFragment : Fragment() {
-
+class ProfileFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val design = inflater.inflate(R.layout.fragment_cart, container, false)
+        val design = inflater.inflate(R.layout.fragment_profile, container, false)
 
         (activity as AppCompatActivity).setSupportActionBar(design.findViewById(R.id.toolbar))
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homepageFragment"
-        android:name="com.simgesengun.foodapplication.HomepageFragment"
+        android:name="com.simgesengun.foodapplication.fragment.HomepageFragment"
         android:label="HomepageFragment"
         tools:layout="@layout/fragment_homepage">
         <action
@@ -16,26 +16,26 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.simgesengun.foodapplication.DetailsFragment"
+        android:name="com.simgesengun.foodapplication.fragment.DetailsFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_details">
         <argument
-            android:name="item"
-            app:argType="com.simgesengun.foodapplication.Item" />
+            android:name="food"
+            app:argType="com.simgesengun.foodapplication.entity.Food" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.simgesengun.foodapplication.CartFragment"
+        android:name="com.simgesengun.foodapplication.fragment.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/notificationsFragment"
-        android:name="com.simgesengun.foodapplication.NotificationsFragment"
+        android:name="com.simgesengun.foodapplication.fragment.NotificationsFragment"
         android:label="fragment_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.simgesengun.foodapplication.ProfileFragment"
+        android:name="com.simgesengun.foodapplication.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

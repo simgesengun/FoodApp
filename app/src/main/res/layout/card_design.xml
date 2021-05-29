@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="item"
-            type="com.simgesengun.foodapplication.Item" />
+            name="food"
+            type="com.simgesengun.foodapplication.entity.Food" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,8 +53,7 @@
             android:translationZ="90dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:image_resource="@{item.picture_name}"
-            tools:srcCompat="@drawable/baklava"
+            android:image_resource="@{food.picture_name}"
             android:backgroundTint="@color/transparent_black"
             android:background="@drawable/card_image"/>
 
@@ -83,14 +82,14 @@
                     android:id="@+id/textViewName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{item.name}"
+                    android:text="@{food.name}"
                     android:textAppearance="@style/TextView.CardDesign" />
 
                 <TextView
                     android:id="@+id/textViewPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:set_price="@{item.price}"
+                    android:set_price="@{food.price}"
                     android:textAppearance="@style/TextView.CardDesign.Small" />
             </LinearLayout>
 

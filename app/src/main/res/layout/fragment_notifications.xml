@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".NotificationsFragment">
+    tools:context=".fragment.NotificationsFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

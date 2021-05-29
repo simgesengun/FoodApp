@@ -1,19 +1,22 @@
-package com.simgesengun.foodapplication
+package com.simgesengun.foodapplication.fragment
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
+import com.simgesengun.foodapplication.R
+import com.simgesengun.foodapplication.adapter.FoodAdapter
 import com.simgesengun.foodapplication.databinding.FragmentHomepageBinding
+import com.simgesengun.foodapplication.viewmodel.HomepageViewModel
 
 class HomepageFragment : Fragment() {
 
-    private lateinit var itemsList : ArrayList<Item>
-    private lateinit var adapter : ItemAdapter
     private lateinit var design : FragmentHomepageBinding
+    private lateinit var viewModel: HomepageViewModel
+    private lateinit var adapter : FoodAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,18 +24,22 @@ class HomepageFragment : Fragment() {
     ): View? {
         design = DataBindingUtil.inflate(inflater, R.layout.fragment_homepage, container, false)
 
-        itemsList = createItemsList()
-
         (activity as AppCompatActivity).setSupportActionBar(design.toolbar)
 
-        adapter = ItemAdapter(requireContext(),itemsList)
-        design.itemAdapter = adapter
+        viewModel.foodsList.observe(viewLifecycleOwner,{ foodsList ->
+            adapter = FoodAdapter(requireContext(),foodsList,viewModel)
+            design.adapter = adapter
+        })
+
 
         return design.root
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+
+        val temp : HomepageViewModel by viewModels()
+        viewModel = temp
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -44,15 +51,9 @@ class HomepageFragment : Fragment() {
         return true
     }
 
-    fun createItemsList() : ArrayList<Item>{
-        return arrayListOf(
-            Item(0,"Ayran",20.5,"ayran"),
-            Item(1,"Baklava",20.5,"baklava"),
-            Item(2,"Pizza",20.5,"pizza"),
-                    Item(3,"Ayran",20.5,"ayran"),
-        Item(4,"Baklava",20.5,"baklava"),
-        Item(5,"Pizza",20.5,"pizza")
-        )
+    override fun onResume() {
+        super.onResume()
+        viewModel.loadFoods()
     }
 
 }

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="itemAdapter"
-            type="com.simgesengun.foodapplication.ItemAdapter" />
+            name="adapter"
+            type="com.simgesengun.foodapplication.adapter.FoodAdapter" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomepageFragment">
+    tools:context=".fragment.HomepageFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -62,7 +62,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="16dp"
-                        android:adapter="@{itemAdapter}"
+                        android:adapter = "@{adapter}"
                         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
                         app:spanCount="3" />
                 </LinearLayout>
