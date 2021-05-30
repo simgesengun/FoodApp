@@ -17,7 +17,7 @@ Food ordering application made with Kotlin, Retrofit and Firebase
 ## Screenshots
 
 ### Light Mode
-![Light](screenshots/screen_light.png) ![Light](screenshots/screen_light_2.png) ![Light](screenshots/screen_light_3.png)
+![Light](screenshots/screen_light.jpg) ![Light](screenshots/screen_light_2.jpg) ![Light](screenshots/screen_light_3.jpg)
 
 ### Dark Mode
-![Dark](screenshots/screen_dark.png) ![Dark](screenshots/screen_dark.png) ![Dark](screenshots/screen_dark.png)
+![Dark](screenshots/screen_dark.jpg) ![Dark](screenshots/screen_dark.jpg) ![Dark](screenshots/screen_dark.jpg)
