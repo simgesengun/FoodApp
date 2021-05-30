@@ -17,5 +17,8 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:navigationBarColor">@color/racoon</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorPrimaryDark">@color/back_start_color</item>
+
     </style>
 </resources>

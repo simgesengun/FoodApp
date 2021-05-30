@@ -18,6 +18,8 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
         <item name="android:navigationBarColor">@color/racoon</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark">@color/back_start_color</item>
     </style>
     <style name="MyTheme" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:actionButtonStyle">@style/myActionButtonStyle</item>
