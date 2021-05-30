@@ -27,7 +27,7 @@ class HomepageFragment : Fragment() {
         (activity as AppCompatActivity).setSupportActionBar(design.toolbar)
 
         viewModel.foodsList.observe(viewLifecycleOwner,{ foodsList ->
-            adapter = FoodAdapter(requireContext(),foodsList,viewModel)
+            adapter = FoodAdapter(requireContext(),foodsList)
             design.adapter = adapter
         })
 

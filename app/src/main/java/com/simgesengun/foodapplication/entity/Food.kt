@@ -6,14 +6,17 @@ import java.io.Serializable
 
 data class Food (@SerializedName("yemek_id")
                     @Expose
-                    var id : Int,
+                    var id : Int? = null,
                     @SerializedName("yemek_adi")
                     @Expose
-                    var name : String,
+                    var name : String? = null,
                     @SerializedName("yemek_resim_adi")
                     @Expose
-                    var picture_name : String,
+                    var picture_name : String? = null,
                     @SerializedName("yemek_fiyat")
                     @Expose
-                    var price : Int) : Serializable {
+                    var price : Int? = null,
+                    @SerializedName("yemek_siparis_adet")
+                     @Expose
+                     var number : Int? = null) : Serializable {
 }

@@ -6,6 +6,15 @@
         <variable
             name="food"
             type="com.simgesengun.foodapplication.entity.Food" />
+        <variable
+            name="number"
+            type="Integer" />
+        <variable
+            name="viewModel"
+            type="com.simgesengun.foodapplication.viewmodel.DetailsViewModel" />
+        <variable
+            name="detailsFragment"
+            type="com.simgesengun.foodapplication.fragment.DetailsFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -104,10 +113,32 @@
                 android:id="@+id/buttonNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
+                android:text="@{number.toString()}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:translationZ="90dp"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonNumber"
+                app:layout_constraintEnd_toEndOf="@+id/buttonNumber"
+                app:layout_constraintTop_toTopOf="@+id/buttonNumber"
+                app:srcCompat="@drawable/ic_details_up"
+                android:onClick="@{() -> viewModel.numberUp()}"/>
+
+            <ImageView
+                android:id="@+id/imageViewDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:translationZ="90dp"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonNumber"
+                app:layout_constraintStart_toStartOf="@+id/buttonNumber"
+                app:layout_constraintTop_toTopOf="@+id/buttonNumber"
+                app:srcCompat="@drawable/ic_details_down"
+                android:onClick="@{() -> viewModel.numberDown()}"/>
 
             <TextView
                 android:id="@+id/textViewName"
@@ -143,7 +174,7 @@
                 android:id="@+id/textViewTotalPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:set_price="@{food.price}"
+                android:set_price="@{food.price * number}"
                 android:textAppearance="@style/TextView.CardDesign.Small"
                 app:layout_constraintBottom_toBottomOf="@+id/button"
                 app:layout_constraintStart_toStartOf="parent"
@@ -155,7 +186,8 @@
                 android:layout_height="wrap_content"
                 android:text="Add to Cart"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="@{() -> detailsFragment.cartButtonClicked(food)}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

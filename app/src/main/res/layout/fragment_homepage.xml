@@ -43,7 +43,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="20dp"
                 android:text="@string/title"
                 android:textAppearance="@style/TextView.h1.Bold" />
 
@@ -64,7 +64,7 @@
                         android:layout_marginTop="16dp"
                         android:adapter = "@{adapter}"
                         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                        app:spanCount="3" />
+                        app:spanCount="2" />
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
         </LinearLayout>

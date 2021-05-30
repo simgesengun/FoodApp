@@ -10,7 +10,7 @@ import com.simgesengun.foodapplication.entity.Food
 import com.simgesengun.foodapplication.fragment.HomepageFragmentDirections
 import com.simgesengun.foodapplication.viewmodel.HomepageViewModel
 
-class FoodAdapter (var mContext : Context, var foodsList : List<Food>,  var viewModel : HomepageViewModel) :
+class FoodAdapter (var mContext : Context, var foodsList : List<Food>) :
     RecyclerView.Adapter<FoodAdapter.FoodCardDesignHolder>() {
 
     inner class FoodCardDesignHolder(itemCardDesignBinding: CardDesignBinding) : RecyclerView.ViewHolder(itemCardDesignBinding.root){

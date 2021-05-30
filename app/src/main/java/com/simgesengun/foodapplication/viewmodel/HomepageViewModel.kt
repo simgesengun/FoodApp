@@ -2,6 +2,7 @@ package com.simgesengun.foodapplication.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.database.DatabaseReference
 import com.simgesengun.foodapplication.entity.Food
 import com.simgesengun.foodapplication.repo.FoodDaoRepository
 
@@ -18,17 +19,5 @@ class HomepageViewModel : ViewModel() {
 
     fun loadFoods(){
         fdaor.getAllFoods()
-    }
-
-    fun loadCartFoods(){
-        fdaor.getAllCartFoods()
-    }
-
-    fun deleteCartFood(id : Int){
-        fdaor.deleteCartFood(id)
-    }
-
-    fun searchFood(search : String){
-        fdaor.searchFood(search)
     }
 }
