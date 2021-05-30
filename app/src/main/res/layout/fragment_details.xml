@@ -113,7 +113,10 @@
                 android:id="@+id/buttonNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="gravity"
                 android:text="@{number.toString()}"
+                android:textAppearance="@style/TextView.CardDesign.Small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -122,23 +125,25 @@
                 android:id="@+id/imageViewUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.numberUp()}"
                 android:translationZ="90dp"
                 app:layout_constraintBottom_toBottomOf="@+id/buttonNumber"
                 app:layout_constraintEnd_toEndOf="@+id/buttonNumber"
                 app:layout_constraintTop_toTopOf="@+id/buttonNumber"
                 app:srcCompat="@drawable/ic_details_up"
-                android:onClick="@{() -> viewModel.numberUp()}"/>
+                app:tint="@color/icon_color" />
 
             <ImageView
                 android:id="@+id/imageViewDown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.numberDown()}"
                 android:translationZ="90dp"
                 app:layout_constraintBottom_toBottomOf="@+id/buttonNumber"
                 app:layout_constraintStart_toStartOf="@+id/buttonNumber"
                 app:layout_constraintTop_toTopOf="@+id/buttonNumber"
                 app:srcCompat="@drawable/ic_details_down"
-                android:onClick="@{() -> viewModel.numberDown()}"/>
+                app:tint="@color/icon_color" />
 
             <TextView
                 android:id="@+id/textViewName"

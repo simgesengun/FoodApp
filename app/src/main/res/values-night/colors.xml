@@ -11,9 +11,10 @@
     <color name="orange">#CA5821</color>
     <color name="yellow">#FFBF2B</color>
     <color name="semi_transparent">#0FFFFFFF</color>
-    <color name="navbar">#333333</color>
     <color name="text_color">#AAAAAA</color>
     <color name="dark_text_color">#CCCCCC</color>
     <color name="back_start_color">#171717</color>
     <color name="back_end_color">#272727</color>
+    <color name="white_text">#AAAAAA</color>
+    <color name ="icon_color">@color/racoon</color>
 </resources>

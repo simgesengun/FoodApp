@@ -15,4 +15,6 @@
     <color name="dark_text_color">#333333</color>
     <color name="back_start_color">#E8E8E6</color>
     <color name="back_end_color">#FFFFFFFF</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name ="icon_color">@color/white</color>
 </resources>

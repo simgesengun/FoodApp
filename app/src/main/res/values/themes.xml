@@ -70,7 +70,7 @@
     </style>
 
     <style name="Button" parent="TextAppearance.AppCompat.Button">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/white_text</item>
         <item name="android:textSize">10sp</item>
         <item name="android:background">@color/orange</item>
         <item name="cornerRadius">5dp</item>
