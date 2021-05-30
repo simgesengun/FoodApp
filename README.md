@@ -12,12 +12,13 @@ Food ordering application made with Kotlin, Retrofit and Firebase
 
 - Night Mode
 - Cart with Firebase Realtime Database
-- Items data are from Retrofit
+- Food data from Retrofit
 
 ## Screenshots
 
 ### Light Mode
-![Light](screenshots/screen_light.jpg) ![Light](screenshots/screen_light_2.jpg) ![Light](screenshots/screen_light_3.jpg)
+<img src="/screenshots/screen_light.jpg" width="300">&nbsp;&nbsp;<img src="/screenshots/screen_light_2.jpg" width="300">&nbsp;&nbsp;<img src="/screenshots/screen_light_3.jpg" width="300">
 
 ### Dark Mode
-![Dark](screenshots/screen_dark.jpg) ![Dark](screenshots/screen_dark.jpg) ![Dark](screenshots/screen_dark.jpg)
+
+<img src="/screenshots/screen_dark.jpg" width="300">&nbsp;&nbsp;<img src="/screenshots/screen_dark_2.jpg" width="300">&nbsp;&nbsp;<img src="/screenshots/screen_dark_3.jpg" width="300">
