@@ -12,7 +12,9 @@ Food ordering application made with Kotlin, Retrofit and Firebase
 
 - Night Mode
 - Cart with Firebase Realtime Database
-- Food data from Retrofit
+- Food data retrieved from web server with Retrofit
+- Used MVVM architecture
+- Picasso has been used for the pictures
 
 ## Screenshots
 
