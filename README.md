@@ -10,7 +10,7 @@ Food ordering application made with Kotlin, Retrofit and Firebase
 
 ## Features
 
-- Night Mode.
+- Dark Mode.
 - Cart with Firebase Realtime Database.
 - Food data retrieved from web server with Retrofit.
 - Used MVVM architecture.
