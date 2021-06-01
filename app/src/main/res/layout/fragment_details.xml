@@ -109,41 +109,49 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
-            <Button
-                android:id="@+id/buttonNumber"
+            <LinearLayout
+                android:id="@+id/layoutNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textAlignment="gravity"
-                android:text="@{number.toString()}"
-                android:textAppearance="@style/TextView.CardDesign.Small"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:theme="@style/DetailsNumberTheme"
+                android:translationZ="90dp"
+                android:weightSum="3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageViewUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="@{() -> viewModel.numberUp()}"
-                android:translationZ="90dp"
-                app:layout_constraintBottom_toBottomOf="@+id/buttonNumber"
-                app:layout_constraintEnd_toEndOf="@+id/buttonNumber"
-                app:layout_constraintTop_toTopOf="@+id/buttonNumber"
-                app:srcCompat="@drawable/ic_details_up"
-                app:tint="@color/icon_color" />
+                <ImageView
+                    android:id="@+id/imageViewDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:onClick="@{() -> viewModel.numberDown()}"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_details_down" />
 
-            <ImageView
-                android:id="@+id/imageViewDown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="@{() -> viewModel.numberDown()}"
-                android:translationZ="90dp"
-                app:layout_constraintBottom_toBottomOf="@+id/buttonNumber"
-                app:layout_constraintStart_toStartOf="@+id/buttonNumber"
-                app:layout_constraintTop_toTopOf="@+id/buttonNumber"
-                app:srcCompat="@drawable/ic_details_down"
-                app:tint="@color/icon_color" />
+                <TextView
+                    android:id="@+id/textNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@{number.toString()}"
+                    android:paddingHorizontal="5dp" />
+
+                <ImageView
+                    android:id="@+id/imageViewUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:onClick="@{() -> viewModel.numberUp()}"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_details_up" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textViewName"
@@ -153,7 +161,7 @@
                 android:text="@{food.name}"
                 android:textAppearance="@style/TextView.CardDesign"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonNumber" />
+                app:layout_constraintTop_toBottomOf="@+id/layoutNumber" />
 
             <TextView
                 android:id="@+id/textViewPrice"
@@ -189,10 +197,11 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> detailsFragment.cartButtonClicked(food)}"
                 android:text="Add to Cart"
+                android:theme="@style/MyButtonTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:onClick="@{() -> detailsFragment.cartButtonClicked(food)}"/>
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

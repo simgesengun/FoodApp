@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.simgesengun.foodapplication.R
 import com.simgesengun.foodapplication.adapter.FoodAdapter
@@ -31,6 +32,18 @@ class HomepageFragment : Fragment() {
             adapter = FoodAdapter(requireContext(),foodsList)
             design.adapter = adapter
         })
+
+        val manager : GridLayoutManager = GridLayoutManager(context,2)
+        manager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup(){
+            override fun getSpanSize(position: Int): Int {
+                return when(position){
+                    0 -> 2
+                    else -> 1
+                }
+            }
+
+        }
+        design.rv.layoutManager = manager
 
         return design.root
     }

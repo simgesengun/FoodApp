@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable
-            name="text"
-            type="String" />
-    </data>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -14,10 +9,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="20dp"
             android:maxLines="2"
             android:minLines="2"
-            android:text="@{text}"
+            android:text="@string/title"
             android:textAppearance="@style/TextView.h1.Bold" />
     </LinearLayout>
 </layout>

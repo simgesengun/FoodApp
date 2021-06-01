@@ -14,13 +14,12 @@
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         android:paddingTop="50dp"
-        android:theme="@style/MyTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/toolbar_menu"
-        app:popupTheme="@style/MyTheme"
-        app:titleTextAppearance="@style/TextView.h1" />
+        android:theme="@style/MyToolbarTheme"
+        app:popupTheme="@style/MyToolbarTheme"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

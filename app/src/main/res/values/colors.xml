@@ -10,11 +10,11 @@
     <color name="racoon">#151511</color>
     <color name="orange">#CA5821</color>
     <color name="yellow">#FFBF2B</color>
+
     <color name="semi_transparent">#0F000000</color>
-    <color name="text_color">#000000</color>
-    <color name="dark_text_color">#333333</color>
+    <color name="text_color">#333333</color>
     <color name="back_start_color">#E8E8E6</color>
-    <color name="back_end_color">#FFFFFFFF</color>
-    <color name="white_text">#FFFFFF</color>
-    <color name ="icon_color">@color/white</color>
+    <color name="back_end_color">@color/white</color>
+    <color name="cart_bottom_text_color">@color/white</color>
+    <color name="color_on_orange">@color/white</color>
 </resources>

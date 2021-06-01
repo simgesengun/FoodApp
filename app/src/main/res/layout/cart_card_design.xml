@@ -59,15 +59,13 @@
                     app:tint="@color/text_color"
                     app:srcCompat="@drawable/ic_cart_up" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editTextNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/transparent"
-                    android:ems="1"
                     android:gravity="center"
-                    android:inputType="number"
                     android:text="@{cartFood.order_number.toString()}"
                     android:textAppearance="@style/TextView.Body" />
 
