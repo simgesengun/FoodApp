@@ -139,8 +139,9 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:gravity="center"
-                    android:text="@{number.toString()}"
-                    android:paddingHorizontal="5dp" />
+                    android:minWidth="42dp"
+                    android:paddingHorizontal="5dp"
+                    android:text="@{number.toString()}" />
 
                 <ImageView
                     android:id="@+id/imageViewUp"

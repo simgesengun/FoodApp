@@ -16,5 +16,5 @@
     <color name="back_start_color">#171717</color>
     <color name="back_end_color">#272727</color>
     <color name="cart_bottom_text_color">@color/text_color</color>
-    <color name="color_on_orange">#DDDDDD</color>
+    <color name="color_on_orange">@color/back_start_color</color>
 </resources>
